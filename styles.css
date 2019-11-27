@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(205, 227, 204);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+nav {
+  width: 300px;
+  float: left;
+  height: 100vh;
+  position: fixed;
+  
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#map-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  float: left;
+  margin-left: 300px;
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-botto: 20px;
+  border-radius: 10px;
+  border: 2px solid #52821a;
+  width: calc(100% - 320px);
+  padding: 25px;
+  height: calc(100vh - 40px);
+  z-index: 500;
+}
+
+#title {
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 24px;
+  color: #52821a;
+  position: fixed;
+}
+
+#disclaimer {
+  font-size: 11px;
+  color: #52821a;
+  top: calc(100vh - 50px);
+  margin: 20px;
+  position: fixed;  
+}
+
+#logo {
+  margin: 50px;
+  top: 80px;
+  position: fixed;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: white;
+  width: 350px;
+}
+
+.leaflet-popup-content {
+  background-color: white;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #78bced;
+}
+
+.checkboxes {
+  background: white;
+  padding: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 20000;
+}
+
+@media (max-width: 415px) {
+  body {
+    font-size: 34px;
+  }
+  
+  /* If the screen is too small, make everything 100% wide instead */
+  
+  #map {
+    float: none;
+    width: 100%;
+    padding: 5px;
+    height: 60vh;
+  }
+  
+  /* If the screen is too small, get rid of the info box */
+  .info {
+    display: none; 
+  }
+}

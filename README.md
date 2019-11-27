@@ -1,2 +1,3 @@
-# markets
-Map showing Today's NYC Green Markets
+# NYC Green Markets
+
+Filtering Markets by Day of Operation
