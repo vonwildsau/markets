@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Today's Markets</title>
+    <link rel="icon" href="https://cdn.glitch.com/dda32ce9-4d64-4770-85b6-953734fa7cdd%2FGrowNYCbug100.png?v=1574814596266">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- Load Leaflet CSS -->
+    <link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div id="map-wrapper">
+      
+    
+    
+    <nav>
+        <div id="title">NYC Green Markets 
+           <br>
+           <span style="font-size: 37px;">Open Today*</span>
+        </div>
+      <a href="https://www.grownyc.org/greenmarket" target="_blank"><img id="logo" src="https://cdn.glitch.com/dda32ce9-4d64-4770-85b6-953734fa7cdd%2FGrowNYCbug100.png?v=1574814596266"></a>
+        <div id="disclaimer">*season dependent, check season dates</div>
+    </nav>   
+    
+    <div id="map">  
+    </div>
+      
+      </div>
+    
+    <!-- This script element will not be displayed, it just holds our template   -->
+    <script class="popup-template" type="x-tmpl-mustache">
+      <div>
+        <h2><center>{{marketname}}</center></h2>
+        <div><b>Address:</b> {{streetaddress}}</div>
+        <div><b>Season:</b> {{seasondates}}</div>
+        <div><b>Days:</b> {{daysoperation}}</div>
+        <div><b>Hours:</b> {{hoursoperations}}</div>
+        <div><b>EBT:</b> {{accepts_ebt}}</div>
+        
+      </div>
+    </script>
+    
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+    
+    <!-- import the Mustache library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+     <script src="/script.js" defer></script>
+    
+  </body>
+</html>
