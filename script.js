@@ -12,7 +12,7 @@ var map = L.map('map', {
 var popupTemplate = document.querySelector('.popup-template').innerHTML;
 
 // Add base layer
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png', {
+L.tileLayer(' https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: "&copy <a href=https://vonwildsau.com target='_blank'> vonwildsau</a>, <a href=https://data.cityofnewyork.us/dataset/DOHMH-Farmers-Markets/8vwk-6iz2> DOHMH</a>",
 }).addTo(map);
@@ -37,7 +37,7 @@ var options = { weekday: 'long'};
 var day = (new Intl.DateTimeFormat('en-US', options).format(d));
 console.log('Today is: ' + day);
 
-var sql = "SELECT * FROM vonwildsau.table_8vwk_6iz2 WHERE daysoperation ILIKE "
+var sql = "SELECT * FROM vonwildsau.table_8vwk_6iz2 WHERE open_year_round ILIKE 'Yes' AND daysoperation ILIKE "
 console.log(sql + "'%" + day + "%'");
   
 source.setQuery(sql + "'%" + day + "%'");
@@ -46,14 +46,15 @@ source.setQuery(sql + "'%" + day + "%'");
 // Create style for the data
 var style = new carto.style.CartoCSS(`
 #layer {
-  marker-width: 10;
+  marker-width: 13;
   marker-fill: #1b7200;
   marker-fill-opacity: 0.9;
+  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/production/vonwildsau/assets/20191207192556toma.png');
   marker-allow-overlap: true;
   marker-line-width: 1;
   marker-line-color: #FFFFFF;
   marker-line-opacity: 1;
-  [zoom<12] {marker-width: 10}
+  [zoom<12] {marker-width: 14}
   [zoom>12] {marker-width: 20}
 }
 `);

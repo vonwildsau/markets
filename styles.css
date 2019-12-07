@@ -43,8 +43,8 @@ nav {
 }
 
 #title {
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 40px;
+  margin-left: 25px;
   font-size: 24px;
   color: #52821a;
   position: fixed;
@@ -59,8 +59,9 @@ nav {
 }
 
 #logo {
-  margin: 50px;
-  top: 80px;
+  margin: 20px;
+  top: 120px;
+  width: 255px;
   position: fixed;
 }
 
